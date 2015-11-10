@@ -1,0 +1,24 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    title ZiarnoFenixa
+    link rel="stylesheet" href=static_path(@conn,"/css/app.css")
+  body
+    .navbar.navbar-default
+      .navbar-brand ZiarnoFenixa
+      ul.nav.navbar-nav.pull-right
+        li
+        = if logged_in?(@conn) do
+          li        
+            img src="#{current_user(@conn).image}"
+          li
+            a href="/auth/logout" Signed in as #{current_user(@conn).name}
+        - else
+          li 
+            a href="/auth/facebook" Login with Facebook
+
+    = @inner
+    script src=static_path(@conn,"/js/app.js")
+    script require("web/static/js/app")

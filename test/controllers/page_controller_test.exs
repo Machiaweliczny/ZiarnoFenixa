@@ -1,0 +1,8 @@
+defmodule ZiarnoFenixa.PageControllerTest do
+  use ZiarnoFenixa.ConnCase
+
+  test "GET /" do
+    conn = get conn(), "/"
+    assert html_response(conn, 200) =~ "Welcome to Phoenix!"
+  end
+end
