@@ -25,3 +25,5 @@ To deploy to heroku:
   7. `heroku addons:create heroku-postgresql`
   8. `heroku run mix ecto.migrate`
   9. `heroku config:set CLIENT_ID=<FB_APP_ID> CLIENT_SECRET=<FB_APP_SECRET> HOST_URL=https://my_cool_name.herokuapp.com SECRET_KEY_BASE=<64_chars_string>`
+  
+CREDIT: Based upon and extracted from [freakone/ElixirChat(https://github.com/freakone/ElixirChat)
